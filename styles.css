@@ -8,10 +8,10 @@
 }
 
 body {
-  background: #212833 ;
+  background: url("../assets/grid.png") #2b3443 ;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: inset 0 70px 80px rgb(0 0 0 / 21%);
-  font-family: 'Poppins', sans-serif;
-
 }
 
 /* =============  Scrollbar  ============= */
@@ -27,14 +27,14 @@ body {
 
 
 
-.container {
+#main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
-
 }
+
 #header {
   width: 1400px;
   margin-top: 1rem;
@@ -44,7 +44,6 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
   overflow: hidden;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   border-top: 1px solid rgba(255, 255, 255, 0.4);
   border-left: 1px solid rgba(255, 255, 255, 0.4);
@@ -64,144 +63,78 @@ body {
   font-weight: bold;
 }
 
-
-#OperationContainer {
-  position: absolute;
-  top: 25px;
-  left: 20px;
-}
-
-#OperationContainer button {
-  background: #161824;
-  margin-left: 0.5rem;
-  outline: none;
-  border: none;
-  padding: 0.4rem 1rem;
-  color: #fff;
-  border-radius: 2px;
-}
-#OperationContainer button:hover {
-  cursor: pointer;
-}
-#OperationContainer input {
-  padding-left: 0.4rem !important;
-  padding: 0.3rem 0;
-  border-radius: 2px;
-  outline: none;
-  border: 1px solid transparent;
-}
-#OperationContainer input:focus {
-  border: 1px solid rgb(183, 0, 255);
-}
-
-
-#InsertNodeField,
-#DeleteNodeField {
-  width: 120px;
-}
-#DeleteNodeField {
-  margin-left: 10px;
-}
-
-.Canvas {
-  width: 100%;
-  height: 100vh;
+#container {
   display: flex;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-}
-
-
-.indicator_container {
+  width: 1000px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  background-color: cornflowerblue;
-  padding: 0.5rem 1rem ;
-  font-size: 0.9rem;
-  gap: 2rem;
-  width: 800px;
+  text-align: center;
 }
 
-.indicator  {
+.algo-container {
+  width: 25rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.363);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
   display: flex;
-  align-items: center;
-}
-.indicator_block {
-  margin-right: 0.3rem;
-}
-.indicator  #edge{
-  height: 0.2rem;
-  width: 2.5rem;
-  background-color: #099691;
-  box-shadow: 0 0 1px #333;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(5px);
 }
 
-.indicator  #node {
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 50%;
-  background-color: #25d003;
-  box-shadow: 0 0 1px #333;
-}
+/* .imageContainer:hover img{
+  scale: calc(105%);
+  transition: all 0.3s ease-in-out;
+} */
 
-
-
-
-
-
-
-.indicator text {
-  font-size: 20px !important;
-}
-
-svg {
-  margin-top: 5px;
+.image {
   width: 100%;
-  /* max-width: 1200px; */
-  height: 100%;
-  overflow: scroll;
+  height: 13rem !important;
+  border-radius: 5px;
 }
 
-.node circle {
-  fill: #29e703;
-  /* fill-opacity: 0.6; */
-  stroke: #168700;
-  stroke-width: 1px;
+
+.algo-container a {
+  text-decoration: none;
+  color: #dcebff;
+  font-size: 20px;
+  margin: 0;
 }
-.node text {
-  font-size: 22px;
-  fill: #ffffff;
+.algo-container a .description {
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.065);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.062);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Poppins', sans-serif;
+  backdrop-filter: blur(5px);
+  
+  padding: 1rem;
+}
+.algo-container a .description p:nth-child(1) {
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+}
+.algo-container a .description p:nth-child(2) {
+  font-size: 0.8rem;
 }
 
-.highlightedNode circle {
-  fill: red;
-  stroke: red;
-  stroke-width: 1px;
-}
-
-.null-node,
-.null-link {
-  visibility: hidden;
-}
-
-line {
-  stroke: #099b96;
-}
-
-.LinkAnimation {
-  stroke: red;
-  stroke-dasharray: 500;
-  animation: filling 1s linear forwards;
-}
-
-@keyframes filling {
-  from {
-    stroke-dashoffset: 500;
-  }
-  to {
-    stroke-dashoffset: 0;
+@media (max-width: 1050px) {
+  #container {
+    width: 100%;
   }
 }
+@media (max-width: 1400px) {
+  #header {
+    width: 95%;
+  }
+  
+}
+
+
