@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Algorithm Visualizer | Binary Search Tree</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="header">
-        <div id="OperationContainer">
-          <input type="text" id="InsertNodeField" placeholder="Enter the number"/>
-          <button type="button" id="InsertButton" class="button">Insert</button>
-          <input type="text" id="DeleteNodeField" placeholder="Enter the number"/>
-          <button type="button" id="DeleteButton" class="button">Delete</button>
-        </div>
-        <a href="/index.html"><div id="title">Algorithm Visualizer</div></a>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <title>Algorithm Visualizer</title>
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <a href="/index.html"><div id="title">Algorithm Visualizer</div></a>
+    </div>
+    <div id="container">
+      <div class="algo-container">
+        <a href="algos/trie/index.html" class="category_link" target="_blank">
+          <div class="imageContainer">
+            <img src="assets/trie.jpg" class="image" />
+          </div>
+          <div class="description">
+            <p>Trie</p>
+            <p>Trie is a type of k-ary search tree used for storing and searching a specific key from a set. Using Trie, search complexities can be brought to optimal limit (key length). </p>
+          </div>
+        </a>
       </div>
-      <div class="indicator_container">
-        <div class="indicator">
-          <div class="indicator_block" id="edge"></div>
-          <div class=""><p>Edge</p></div>
-        </div>
-        <div class="indicator">
-          <div class="indicator_block" id="node"></div>
-          <div class=""><p>Node</p></div>
-        </div>
-
+      <div class="algo-container">
+        <a href="algos/bst/index.html" class="category_link" target="_blank">
+          <div class="imageContainer">
+            <img src="assets/bst.jpg" class="image" />
+          </div>
+          <div class="description">
+            <p>Binary Search Tree</p>
+            <p>A binary search tree follows some order to arrange the elements like the value of left node must be smaller than the parent node, and the value of right node must be greater than the parent node. 
+          </div>
+        </a>
       </div>
-      <div class="Canvas">
+      <div class="algo-container">
+        <a href="algos/path_finding/index.html" class="category_link" target="_blank">
+          <div class="imageContainer">
+            <img src="assets/path.jpg" class="image" />
+          </div>
+          <div class="description">
+            <p>Path Finding Algorithms</p>
+            <p>Pathfinding algorithms are usually an attempt to solve the shortest and efficient path problems in graph theory. They try to find the best path given a starting point and ending point based on some predefined criteria.              
+              </p>
+          </div>
+        </a>
+      </div>
+      <div class="algo-container">
+        <a href="algos/sorting/index.html" class="category_link" target="_blank">
+          <div class="imageContainer">
+            <img src="assets/sorting.jpg" class="image" />
+          </div>
+          <div class="description">
+            <p>Sorting Algorithms</p>
+            <p>Sorting is a process of ordering or placing a list of elements from a collection in some kind of order. It is nothing but storage of data in sorted order. It arranges the data in ascending and descending order which makes searching easier.</p>
+          </div>
+        </a>
       </div>
     </div>
-
-    <!-- D3.JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js"
-      integrity="sha512-0XfwGD1nxplHpehcSVI7lY+m/5L37PNHDt+DOc7aLFckwPXjnjeA1oeNbru7YeI4VLs9i+ADnnHEhP69C9CqTA=="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./script.js"></script>
-  </body>
+  </div>
+</body>
 </html>
+
+
+
+
